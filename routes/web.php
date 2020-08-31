@@ -16,3 +16,29 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Auth::routes(['verify' => true]);
+
+// Route::get('/home', 'HomeController@index')->middleware('verified');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('users', 'UserController');
+
+Route::resource('banners', 'BannerController');
+
+Route::resource('levels', 'LevelController');
+
+Route::resource('roles', 'RoleController');
+
+Route::resource('staticContents', 'StaticContentController');
+
+Route::resource('questions', 'QuestionController');
+
+Route::resource('answers', 'AnswerController');
+
+Route::resource('levelRoleConfigs', 'LevelRoleConfigController');
+
+Route::resource('quizzes', 'QuizController');
