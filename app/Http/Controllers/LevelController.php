@@ -55,7 +55,7 @@ class LevelController extends AppBaseController
      */
     public function store(CreateLevelRequest $request)
     {
-        $input = $request->all();
+        $input =  array_filter($request->all());
 
         $level = $this->levelRepository->create($input);
 

@@ -54,7 +54,7 @@ class UserController extends AppBaseController
      */
     public function store(CreateUserRequest $request)
     {
-        $input = $request->all();
+        $input =  array_filter($request->all());
 
         $user = $this->userRepository->create($input);
 

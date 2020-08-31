@@ -54,7 +54,7 @@ class QuizController extends AppBaseController
      */
     public function store(CreateQuizRequest $request)
     {
-        $input = $request->all();
+        $input =  array_filter($request->all());
 
         $quiz = $this->quizRepository->create($input);
 

@@ -54,7 +54,7 @@ class BannerController extends AppBaseController
      */
     public function store(CreateBannerRequest $request)
     {
-        $input = $request->all();
+        $input =  array_filter($request->all());
 
         $banner = $this->bannerRepository->create($input);
 

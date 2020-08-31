@@ -54,7 +54,7 @@ class QuestionController extends AppBaseController
      */
     public function store(CreateQuestionRequest $request)
     {
-        $input = $request->all();
+        $input =  array_filter($request->all());
 
         $question = $this->questionRepository->create($input);
 

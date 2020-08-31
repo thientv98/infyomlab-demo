@@ -54,7 +54,7 @@ class StaticContentController extends AppBaseController
      */
     public function store(CreateStaticContentRequest $request)
     {
-        $input = $request->all();
+        $input =  array_filter($request->all());
 
         $staticContent = $this->staticContentRepository->create($input);
 

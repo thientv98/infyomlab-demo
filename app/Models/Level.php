@@ -62,6 +62,9 @@ class Level extends Model
     public function setThumbnailAttribute($value)
     {
         if($value){
+            if($this->thumbnail){
+                Storage::disk('public')->delete($this->thumbnail); //delete file
+            }
             $url = Storage::disk('public')->put('levels', $value);
             $this->attributes['thumbnail'] = $url;
         }

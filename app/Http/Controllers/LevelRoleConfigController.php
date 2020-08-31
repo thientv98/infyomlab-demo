@@ -54,7 +54,7 @@ class LevelRoleConfigController extends AppBaseController
      */
     public function store(CreateLevelRoleConfigRequest $request)
     {
-        $input = $request->all();
+        $input =  array_filter($request->all());
 
         $levelRoleConfig = $this->levelRoleConfigRepository->create($input);
 

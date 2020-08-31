@@ -42,7 +42,7 @@ class Question extends Model
         'id' => 'integer',
         'role_id' => 'integer',
         'title' => 'string',
-        'priority' => 'integer'
+        // 'priority' => 'integer'
     ];
 
     /**

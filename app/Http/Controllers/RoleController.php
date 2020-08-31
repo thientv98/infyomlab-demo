@@ -54,7 +54,7 @@ class RoleController extends AppBaseController
      */
     public function store(CreateRoleRequest $request)
     {
-        $input = $request->all();
+        $input =  array_filter($request->all());
 
         $role = $this->roleRepository->create($input);
 

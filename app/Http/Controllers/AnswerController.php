@@ -54,7 +54,7 @@ class AnswerController extends AppBaseController
      */
     public function store(CreateAnswerRequest $request)
     {
-        $input = $request->all();
+        $input =  array_filter($request->all());
 
         $answer = $this->answerRepository->create($input);
 

@@ -59,6 +59,9 @@ class Role extends Model
     public function setBackgroundImageAttribute($value)
     {
         if($value){
+            if($this->background_image){
+                Storage::disk('public')->delete($this->background_image); //delete file
+            }
             $url = Storage::disk('public')->put('role', $value);
             $this->attributes['background_image'] = $url;
         }
