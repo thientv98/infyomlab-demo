@@ -4,7 +4,8 @@
             <tr>
                 <th>Name</th>
         <th>Username</th>
-        <th>Password</th>
+        <th>Email</th>
+        {{-- <th>Password</th> --}}
         <th>Birthday</th>
         <th>Image</th>
         <th>Phone</th>
@@ -19,7 +20,8 @@
             <tr>
                 <td>{{ $user->name }}</td>
             <td>{{ $user->username }}</td>
-            <td>{{ $user->password }}</td>
+            <td>{{ $user->email }}</td>
+            {{-- <td>{{ $user->password }}</td> --}}
             <td>{{ $user->birthday }}</td>
             <td>{{ $user->image }}</td>
             <td>{{ $user->phone }}</td>

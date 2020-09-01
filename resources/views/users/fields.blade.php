@@ -10,10 +10,16 @@
     {!! Form::text('username', null, ['class' => 'form-control']) !!}
 </div>
 
+<div class="form-group col-sm-6">
+    {!! Form::label('email', 'Email:') !!}
+    {!! Form::text('email', null, ['class' => 'form-control']) !!}
+</div>
+
 <!-- Password Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('password', 'Password:') !!}
-    {!! Form::text('password', null, ['class' => 'form-control']) !!}
+    {!! Form::input('password', 'password', null,  ['class' => 'form-control']) !!}
+    {{-- {!! Form::text('password', null, ['class' => 'form-control']) !!} --}}
 </div>
 
 <!-- Birthday Field -->

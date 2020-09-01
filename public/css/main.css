@@ -1,3 +1,56 @@
 .checkbox-inline{
     padding-bottom: 20px;
 }
+.main-header .logo{
+    background-color: #173a9a !important;
+}
+.navbar.navbar-static-top{
+    background-color: #3e51b5 !important;
+}
+aside.main-sidebar{
+    background-image: url(https://demos.creative-tim.com/vue-material-dashboard/img/sidebar-2.32103624.jpg);
+    background-size: cover;
+}
+aside.main-sidebar::before{
+    content: '';
+    width: 100%;
+    height: calc(100% - 50px);
+    background-color: black;
+    position: absolute;
+    opacity: 0.5;
+}
+@media (max-width: 767px) {
+    aside.main-sidebar::before{
+        height: calc(100% - 100px);
+    }
+}
+.sidebar .sidebar-form{
+    display: none;
+}
+.sidebar-menu>li{
+    background-color: #262728;
+    height: 50px;
+}
+.sidebar-menu>li>a{
+    height: 100%;
+    line-height: 25px;
+}
+.sidebar-menu>li:hover>a{
+    background-color: #38393a !important;
+}
+.sidebar-menu>li.active>a{
+    background-color: #5b5b5b !important;
+    border-left: none;
+}
+.sidebar .user-panel{
+    display: none;
+}
+.navbar .sidebar-toggle:hover{
+    background-color: #173a9a !important;
+}
+.btn-primary{
+    background-color: #4d5fbb;
+}
+.main-header li.user-header{
+    background-color: #3e51b5 !important;
+}

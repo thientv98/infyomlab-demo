@@ -10,11 +10,17 @@
     <p>{{ $user->username }}</p>
 </div>
 
-<!-- Password Field -->
+<!-- Email Field -->
 <div class="form-group">
+    {!! Form::label('email', 'Email:') !!}
+    <p>{{ $user->email }}</p>
+</div>
+
+<!-- Password Field -->
+{{-- <div class="form-group">
     {!! Form::label('password', 'Password:') !!}
     <p>{{ $user->password }}</p>
-</div>
+</div> --}}
 
 <!-- Birthday Field -->
 <div class="form-group">

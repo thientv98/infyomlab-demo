@@ -5,6 +5,8 @@ namespace App\Models;
 use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Support\Facades\Hash;
+
 /**
  * Class User
  * @package App\Models
@@ -69,5 +71,10 @@ class User extends Authenticatable
         'name' => 'required'
     ];
 
-    
+    public function setPasswordAttribute($value)
+    {
+        if($value){
+            $this->attributes['password'] = Hash::make($value);
+        }
+    }
 }
