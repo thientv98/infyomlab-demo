@@ -27,8 +27,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('users', 'UserController');
 
-Route::resource('banners', 'BannerController');
-
 Route::resource('levels', 'LevelController');
 
 Route::resource('roles', 'RoleController');

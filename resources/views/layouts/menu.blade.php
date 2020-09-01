@@ -1,6 +1,3 @@
-<li class="{{ Request::is('banners*') ? 'active' : '' }}">
-    <a href="{{ route('banners.index') }}"><i class="fa fa-edit"></i><span>Banners</span></a>
-</li>
 <li class="{{ Request::is('users*') ? 'active' : '' }}">
     <a href="{{ route('users.index') }}"><i class="fa fa-edit"></i><span>Users</span></a>
 </li>
