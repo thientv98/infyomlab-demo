@@ -51,6 +51,45 @@ aside.main-sidebar::before{
 .btn-primary{
     background-color: #4d5fbb;
 }
+.btn{
+    border-radius: 0px;
+}
 .main-header li.user-header{
     background-color: #3e51b5 !important;
+}
+.table-responsive tr td{
+    vertical-align:middle !important;
+}
+.table-responsive td .btn-group a, .table-responsive td .btn-group button{
+    width: 32px;
+    height: 32px;
+    line-height: 30px;
+    margin-left: 4px;
+    margin-right: 4px;
+    border-radius: 0px;
+}
+.content-wrapper{
+    padding-top: 20px;
+}
+
+/* extend leftbar */
+.main-header .logo, .main-sidebar{
+    width: 250px;
+}
+.main-header .navbar, .content-wrapper{
+    margin-left: 250px;
+}
+@media (max-width: 767px){
+    .content-wrapper, .main-footer {
+        margin-left: 0;
+    }
+    .main-sidebar{
+        transform: translate(-250px, 0);
+    }
+    .main-header .logo, .main-header .navbar{
+        width: 100%;
+    }
+    .main-header .navbar{
+        margin: 0;
+    }
 }

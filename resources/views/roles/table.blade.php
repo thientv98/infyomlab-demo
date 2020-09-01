@@ -13,7 +13,7 @@
         @foreach($roles as $role)
             <tr>
                 <td>{{ $role->title }}</td>
-            <td><img src="{{Storage::url($role->background_image)}}" alt="" width="100px"></td>
+            <td><img src="{{Storage::url($role->background_image)}}" alt="" width="50px"></td>
             <td>{{ $role->status }}</td>
             <td>{{ $role->priority }}</td>
                 <td>
